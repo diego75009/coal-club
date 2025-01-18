@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  background: #fff;
+  color: #0ef;
+}
+
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('./assets/hero-bg.jpg');
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 100px 0;
+}
+
+.content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 5em;
+  color: #fff;
+}
+
+.content h3 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.content p {
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.btn {
+  font-size: 1em;
+  color: #fff;
+  background: #0ef;
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  margin-top: 30px;
+}
+
+.btn:hover {
+  letter-spacing: 6px;
+}
+
+
+.about-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('./assets/about-img.jpg');
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 100px 0;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 50px;
+  }
+
+  .hero-section {
+    padding: 100px 50px;
+  }
+
+  .content h2 {
+    font-size: 2.5em;
+  }
+
+  .content h3 {
+    font-size: 1.5em;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
